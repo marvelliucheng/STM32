@@ -14,30 +14,30 @@ int main(void)
 {
 	
 
+
+	int i=0;
 	
 	SysTick_Configuration();
 	
     TIM4_PWM_Configuration();   //PA1  TIM2_CH2
 	
-
 	while(1)
 	{
-		sound(tone[0]);
-		Delay_us(1000000);
-		sound(tone[1]);
-		Delay_us(1000000);
-		sound(tone[2]);
-		Delay_us(1000000);
-		sound(tone[3]);
-		Delay_us(1000000);
-		sound(tone[4]);
-		Delay_us(1000000);
-		sound(tone[5]);
-		Delay_us(1000000);
-		sound(tone[6]);
-		Delay_us(1000000);
+		while(music_little_star[i][1]!=0)
+		{
+			TIM_Cmd(TIM4,ENABLE);
+			sound(music_little_star[i][0]);
+			Delay_us(music_little_star[i][1]);
+			TIM_Cmd(TIM4,DISABLE);
+			Delay_us(100000);
+			
+			i++;
+			
+		}
+		 i=0;
+		 Delay_us(3000000);
 		
-		    
+			
 		} 
 	}
 
