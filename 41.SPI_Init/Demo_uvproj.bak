@@ -617,6 +617,11 @@
               <FileType>1</FileType>
               <FilePath>.\User\music.c</FilePath>
             </File>
+            <File>
+              <FileName>bsp_hcsr04.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\User\bsp_hcsr04.c</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>

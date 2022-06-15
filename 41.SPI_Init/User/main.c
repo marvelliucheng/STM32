@@ -10,23 +10,21 @@
 #include "bsp_rtc.h"
 #include "music.h"
 #include "bsp_hcsr04.h"
-
+#include "bsp_spi.h"
 
 
 int main(void)
 {
-	unsigned  time;
 	
-   float distance=0;
+
 	
 	
 	SysTick_Configuration();
 	
-    Uart1_Configuration();
+    SPI1_Configuration();
 	
-	Led_Configuration();
-    Uart1_NVIC_Init();
 
+   
 	while(1)
 	{
 	   
