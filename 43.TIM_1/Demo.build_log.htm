@@ -3,8 +3,8 @@
 <pre>
 <h1>µVision Build Log</h1>
 <h2>Project:</h2>
-E:\stm32\stm32-output\STM32\STM32\41.SPI_Init _max6675\Demo.uvproj
-Project File Date:  06/15/2022
+E:\stm32\stm32-output\STM32\STM32\43.TIM_1\Demo.uvproj
+Project File Date:  06/16/2022
 
 <h2>Output:</h2>
 Rebuild target 'Target 1'
@@ -38,15 +38,11 @@ compiling stm32f10x_wwdg.c...
 compiling main.c...
 User\music.h(10): warning:  #1-D: last line of file ends without a newline
   #endif
-User\bsp_hcsr04.h(14): warning:  #1-D: last line of file ends without a newline
+User\bsp_hcsr04.h(17): warning:  #1-D: last line of file ends without a newline
   #endif
-User\bsp_spi_max6675.h(15): warning:  #1-D: last line of file ends without a newline
+User\bsp_spi_max6675.h(16): warning:  #1-D: last line of file ends without a newline
   #endif
-User\main.c(33): warning:  #223-D: function "SPI_read" declared implicitly
-                c=SPI_read();
-User\main.c(21): warning:  #550-D: variable "c" was set but never used
-        u16 c;
-User\main.c: 5 warnings, 0 errors
+User\main.c: 3 warnings, 0 errors
 compiling Led_Key.c...
 User\Led_Key.c(129): warning:  #940-D: missing return statement at end of non-void function "Matrix_Key_Scan"
   }
@@ -60,31 +56,34 @@ compiling bsp_dma.c...
 compiling bsp_adc.c...
 compiling bsp_rtc.c...
 compiling bsp_tim.c...
-User\bsp_tim.c(126): warning:  #1-D: last line of file ends without a newline
-  }
+User\bsp_tim.c(215): warning:  #1-D: last line of file ends without a newline
+   } 
 User\bsp_tim.c: 1 warning, 0 errors
 compiling music.c...
 User\music.h(10): warning:  #1-D: last line of file ends without a newline
   #endif
-User\music.c(37): warning:  #1-D: last line of file ends without a newline
+User\music.c(34): warning:  #1-D: last line of file ends without a newline
   }
 User\music.c: 2 warnings, 0 errors
 compiling bsp_hcsr04.c...
-User\bsp_hcsr04.h(14): warning:  #1-D: last line of file ends without a newline
+User\bsp_hcsr04.h(17): warning:  #1-D: last line of file ends without a newline
   #endif
 User\bsp_hcsr04.c: 1 warning, 0 errors
 compiling bsp_spi_max6675.c...
-User\bsp_spi_max6675.h(15): warning:  #1-D: last line of file ends without a newline
+User\bsp_spi_max6675.h(16): warning:  #1-D: last line of file ends without a newline
   #endif
-User\bsp_spi_max6675.c(45): warning:  #1-D: last line of file ends without a newline
+User\bsp_spi_max6675.c(57): warning:  #1-D: last line of file ends without a newline
   }
 User\bsp_spi_max6675.c: 2 warnings, 0 errors
 linking...
-.\Demo.axf: Error: L6218E: Undefined symbol SPI_read (referred from main.o).
-Not enough information to list image symbols.
-Finished: 1 information, 0 warning and 1 error messages.
-".\Demo.axf" - 1 Error(s), 12 Warning(s).
-Target not created
+Program Size: Code=10408 RO-data=268 RW-data=80 ZI-data=1048  
+".\Demo.axf" - 0 Error(s), 10 Warning(s).
 </pre>
 </body>
 </html>
+
+".\Demo.axf" - 1 Error(s), 10 Warning(s).
+Target not created
+User\bsp_spi_max6675.c: 2 warnings, 0 errors
+".\Demo.axf" - 2 Error(s), 10 Warning(s).
+Target not created
