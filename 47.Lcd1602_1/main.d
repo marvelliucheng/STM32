@@ -44,3 +44,4 @@
 .\main.o: User\bsp_spi_max6675.h
 .\main.o: User\bsp_digitaltube_1.h
 .\main.o: User\bsp_HC74595.h
+.\main.o: User\bsp_lcd1602.h

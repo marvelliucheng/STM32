@@ -20,6 +20,12 @@ unsigned int count=0;
 
 int main(void)
 {
+	
+	unsigned int n=3;
+	unsigned int thousand_bit,hundred_bit,ten_bit,single_bit;
+	unsigned char Hex2char[]="012345678ABCDEF";
+	
+	
 	int i;
    
 	
@@ -29,6 +35,10 @@ int main(void)
     LCD1602_GPIO_Configuration();
 	
 	LCD1602_Init();
+	LCD1602_Show_Str(1,0,"STM32 LCD1602");
+	LCD1602_Show_Str(2,1,"I Love you.");
+	Delay_us(100000);
+    LCD1602_Clear_Screen();
 	
 	
 //	GPIOA->ODR=num;//GPIOA->ODR=0XA4;
@@ -36,16 +46,23 @@ int main(void)
 	while(1)
 	{
 	  
-//	HC595_Send_Data(num[2],3); //3号数码管最左侧显示数字2
-//	
-//	
-//	HC595_Send_Data(num[1],3); //3号数码管最左侧显示数字2
-//	
-//	HC595_Send_Data(num[3],3); //3号数码管最左侧显示数字2
-//	
-//	HC595_Send_Data(num[4],3); //3号数码管最左侧显示数字2
-	Time_Display(RTC_GetCounter());
-	Delay_us(100000);
+
+//		thousand_bit=n/1000;
+//		hundred_bit=n/100%10;
+//		ten_bit=n/10%10;
+//		single_bit=n%10;
+//		
+		LCD1602_Show_Char(12,1,Hex2char[thousand_bit]);
+		LCD1602_Show_Char(13,1,Hex2char[hundred_bit]);
+		LCD1602_Show_Char(14,1,Hex2char[ten_bit]);
+		LCD1602_Show_Char(15,1,Hex2char[single_bit]);
+		
+		n++;
+		
+		LCD1602_Write_Cmd(0x18);
+		
+		
+		Delay_us(1000000);
 		
 	
 	}
